@@ -36,7 +36,7 @@ src = './SXHGB/'           # 在DOCKER中路径要加上SXHGB 因为工作路径
 start_time = time.time()
 
 
-hour_goal: int = 0
+hour_goal: int = 80
 
 user_list = []
 
