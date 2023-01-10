@@ -535,13 +535,13 @@ if __name__ == "__main__":
         
         try:
             print('&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&')
-            print(f'********{name} START TO STUDY********')
+            print(f'********  {name} START TO STUDY  ********')
             study(ume=ume, pwd=pwd, name=name)
             
         except MissionDoneException as e:
             print(e)
             continue
-        except:
+        else:
             print('Unknow Error')
             continue
         
