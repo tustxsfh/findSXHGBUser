@@ -1,0 +1,20 @@
+version: "3.0"
+services:
+  sxhgb:
+    image: selenium_python:v4
+    volumes:
+      - ./SXHGB:/SXHGB                           # 把代码映射到这个目录
+    command: python3 -u  /SXHGB/userStudy.py   # 定义启动容器执行的命令
+    restart: on-failure
+    depends_on:
+      - chrome 
+  chrome:
+    image: selenium/standalone-chrome:108.0 
+    volumes:
+      - ./config.toml:/opt/selenium/config.toml
+    ports:
+      - "4444:4444"
+      - "5900:5900"
+    restart: on-failure
+    shm_size: 2g
+
